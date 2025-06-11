@@ -1,0 +1,214 @@
+/* Estilos generales */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background: #000000;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.75em;
+  color: #707580;
+  padding: 0 10px;
+  font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+@media (min-width: 767px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+
+::-moz-selection {
+  background: rgba(255, 51, 102, 0.1);
+  color: #ff3366;
+}
+
+::selection {
+  background: rgba(255, 51, 102, 0.1);
+  color: #ff3366;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+h1 {
+  font-size: 3.2rem;
+  color: #51555C;
+  line-height: .8em;
+  font-weight: 300;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+  margin-top: 2rem; /* Añadido para separar el título del borde superior */
+}
+
+h1 em {
+  color: #ffffff;
+}
+
+h1 em strong {
+  color: #ff3366;
+}
+
+@media (min-width: 767px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1279px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+p {
+  font-weight: 400;
+}
+
+/* Estilos para la lista de productos */
+#productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #151516; /* Fondo oscuro similar al grid-three sprint-grid */
+  margin-top: 2rem; /* Añadido para separar el título del contenedor de productos */
+}
+
+/* Estilos para los productos en el catálogo */
+.producto {
+  background-color: #212123; /* Fondo oscuro para los productos */
+  border: 1px solid #343537; /* Borde similar al estilo de referencia */
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.producto h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #ff3366; /* Color rojo similar al estilo de referencia */
+}
+
+.producto p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #707580; /* Color gris claro similar al estilo de referencia */
+}
+
+.producto .precio {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff; /* Color blanco para el precio */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .producto img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .producto h2 {
+    font-size: 1.3em;
+  }
+
+  .producto p {
+    font-size: 0.9em;
+  }
+
+  .producto .precio {
+    font-size: 1.1em;
+  }
+}
+
+/* Estilos para el botón de volver */
+.btn-volver {
+  display: block;
+  margin-bottom: 20px;
+  color: #ff3366;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.btn-volver:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes cuando no hay productos */
+.no-productos {
+  text-align: center;
+  color: #ff3366;
+  font-size: 1.2em;
+  grid-column: 1 / -1;
+  padding: 40px;
+}

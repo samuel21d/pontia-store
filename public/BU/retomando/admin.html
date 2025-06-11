@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>Panel de Administración</h1>
+    <a href="https://catalogo-pontia-store.web.app" class="btn-catalogo">Ir al catálogo</a>
+    <button id="cerrar-sesion" class="btn-cerrar-sesion">Cerrar Sesión</button>
+  </header>
+  <main>
+    <form id="form-producto">
+      <input type="text" id="nombre" placeholder="Nombre del producto" required>
+      <textarea id="descripcion" placeholder="Descripción" required></textarea>
+      <input type="number" id="precio" placeholder="Precio" required>
+      <div id="colores-container">
+        <div class="color-group">
+          <label>Color:</label>
+          <input type="text" class="color" placeholder="Ej: Rojo" required>
+          <label>Imágenes (sube archivos):</label>
+          <input type="file" class="imagenes" accept="image/*" multiple required>
+        </div>
+      </div>
+      <div>
+        <label for="tallas">Tallas (separadas por comas):</label>
+        <input type="text" id="tallas" placeholder="Ej: S, M, L" required>
+      </div>
+      <button type="button" id="agregar-color">Añadir otro color</button>
+      <button type="submit">Agregar Producto</button>
+    </form>
+    <div id="lista-productos"></div>
+  </main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
